@@ -7,11 +7,11 @@
     <!-- Carregamento de Bibliotecas: Tailwind CSS e Chart.js -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- Configuração de Fonte Inter -->
+    <!-- Configuração de Fonte Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -23,8 +23,31 @@
         --color-accent3: #ffa600;
       }
       body {
-        font-family: "Inter", sans-serif;
+        font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, "Helvetica Neue", Arial, sans-serif;
         line-height: 1.6;
+        letter-spacing: -0.01em;
+        font-weight: 400;
+      }
+
+      /* Reduzir espaçamento entre letras em títulos */
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        letter-spacing: -0.02em;
+        font-weight: 600;
+      }
+
+      /* Espaçamento ainda mais apertado para títulos grandes */
+      h1 {
+        letter-spacing: -0.03em;
+      }
+
+      h2 {
+        letter-spacing: -0.025em;
       }
       /* Aumenta a altura dos gráficos para melhor visualização em tela cheia */
       .chart-container {
@@ -2938,7 +2961,7 @@
 
       // Configuração global para melhorar a legibilidade do Chart.js para apresentação
       Chart.defaults.font.size = 14;
-      Chart.defaults.font.family = "Inter, sans-serif";
+      Chart.defaults.font.family = "Poppins, sans-serif";
 
       // Função principal para renderizar todos os gráficos
       const renderCharts = () => {
