@@ -55,9 +55,30 @@
       }
     </style>
     <title>Plano Estratégico InnovAI 2026-2031: Rumo à Independência</title>
-    <!-- Carregamento de Bibliotecas: Tailwind CSS e Chart.js -->
+    <!-- Carregamento de Bibliotecas: Tailwind CSS, Chart.js e Mermaid -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (typeof mermaid !== "undefined") {
+          mermaid.initialize({
+            startOnLoad: true,
+            theme: "default",
+            themeVariables: {
+              fontFamily: "Poppins, sans-serif",
+              fontSize: "14px",
+            },
+            flowchart: {
+              useMaxWidth: true,
+              htmlLabels: true,
+              curve: "basis",
+            },
+            securityLevel: "loose",
+          });
+        }
+      });
+    </script>
     <!-- Configuração de Fonte Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -216,6 +237,23 @@
       /* Ajuste de tipografia para o Chart.js */
       .chartjs-render-monitor {
         font-size: 14px;
+      }
+      /* Estilos para Mermaid */
+      .mermaid {
+        background: white !important;
+        border-radius: 12px;
+        padding: 20px;
+        overflow-x: auto;
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+        min-height: 400px;
+        display: block;
+      }
+      .mermaid svg {
+        max-width: 100% !important;
+        height: auto !important;
+        display: block !important;
+        margin: 0 auto !important;
       }
     </style>
   </head>
@@ -1027,12 +1065,12 @@
                       <li>✓ <strong>Duração:</strong> 15 min (timer)</li>
                       <li>
                         ✓ <strong>Ferramenta:</strong> Trello + Google Meet
-                      </li>
+                  </li>
                       <li>
                         ✓ <strong>Formato:</strong> Round-robin (6 pessoas)
-                      </li>
+                  </li>
                       <li>✓ <strong>Liderança:</strong> Caio (Maestro)</li>
-                    </ul>
+                </ul>
                   </div>
                   <div class="bg-green-50 p-3 rounded-lg">
                     <div class="font-bold text-green-800 mb-2 text-sm">
@@ -1077,7 +1115,7 @@
                       <li>✓ Entregas da semana</li>
                       <li>✓ Próximos objetivos</li>
                       <li>✓ Template padronizado</li>
-                    </ul>
+                </ul>
                   </div>
                   <div class="bg-blue-50 p-3 rounded-lg">
                     <div class="font-bold text-blue-800 mb-2 text-sm">
@@ -1125,7 +1163,7 @@
                       <li>✓ Priorização backlog</li>
                       <li>✓ Estimativas (Story Points)</li>
                       <li>✓ Sprint goal definido</li>
-                    </ul>
+                </ul>
                   </div>
                   <div class="bg-purple-50 p-3 rounded-lg">
                     <div class="font-bold text-purple-800 mb-2 text-sm">
@@ -1173,12 +1211,12 @@
                       <li>✓ Status de entregas</li>
                       <li>✓ Ajustes de roadmap</li>
                       <li>✓ Planejamento trimestral</li>
-                    </ul>
-                  </div>
+                </ul>
+              </div>
                   <div class="bg-orange-50 p-3 rounded-lg">
                     <div class="font-bold text-orange-800 mb-2 text-sm">
                       👥 Performance Review
-                    </div>
+            </div>
                     <ul class="space-y-1 text-xs text-gray-700">
                       <li>✓ Review de time</li>
                       <li>✓ Desenvolvimento individual</li>
@@ -1198,8 +1236,8 @@
                     </ul>
                   </div>
                 </div>
-              </div>
-            </div>
+          </div>
+        </div>
 
             <!-- Communication Tools & Metrics -->
             <div
@@ -1209,7 +1247,7 @@
                 class="text-2xl font-bold text-[var(--color-primary)] mb-6 text-center"
               >
                 🛠️ Ferramentas de Comunicação e Disciplina
-              </h4>
+                  </h4>
 
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <!-- Tools -->
@@ -1224,7 +1262,7 @@
                         Gestão visual de projetos, cards atualizados antes de
                         cada standup, board principal sincronizado
                       </p>
-                    </div>
+                </div>
                     <div class="bg-purple-50 p-4 rounded-lg">
                       <div class="font-bold text-purple-800 mb-2">
                         💬 Discord
@@ -1232,17 +1270,17 @@
                       <p class="text-sm text-gray-700">
                         Comunicação síncrona (reuniões) e assíncrona (updates
                         contínuos, notificações)
-                      </p>
-                    </div>
+                    </p>
+                  </div>
                     <div class="bg-green-50 p-4 rounded-lg">
                       <div class="font-bold text-green-800 mb-2">
                         📊 Google Workspace
-                      </div>
+                  </div>
                       <p class="text-sm text-gray-700">
                         Documentação compartilhada, relatórios semanais,
                         templates padronizados
-                      </p>
-                    </div>
+                    </p>
+                  </div>
                     <div class="bg-orange-50 p-4 rounded-lg">
                       <div class="font-bold text-orange-800 mb-2">
                         📧 Email / Whatsapp
@@ -1252,8 +1290,8 @@
                         técnicas
                       </p>
                     </div>
-                  </div>
                 </div>
+              </div>
 
                 <!-- Discipline Metrics -->
                 <div>
@@ -1269,11 +1307,11 @@
                         <span class="text-2xl font-bold text-green-700"
                           >100%</span
                         >
-                      </div>
+                </div>
                       <p class="text-xs text-gray-600">
                         Todos os membros obrigatórios (6 pessoas)
-                      </p>
-                    </div>
+                    </p>
+                  </div>
                     <div class="bg-blue-50 p-4 rounded-lg">
                       <div class="flex justify-between items-center mb-2">
                         <span class="font-bold text-blue-800"
@@ -1282,11 +1320,11 @@
                         <span class="text-2xl font-bold text-blue-700"
                           >100%</span
                         >
-                      </div>
+                  </div>
                       <p class="text-xs text-gray-600">
                         0 atrasos tolerados, chegar 2 min antes
-                      </p>
-                    </div>
+                    </p>
+                  </div>
                     <div class="bg-purple-50 p-4 rounded-lg">
                       <div class="flex justify-between items-center mb-2">
                         <span class="font-bold text-purple-800"
@@ -1295,11 +1333,11 @@
                         <span class="text-2xl font-bold text-purple-700"
                           >100%</span
                         >
-                      </div>
+                </div>
                       <p class="text-xs text-gray-600">
                         Impedimentos resolvidos em até 2h pelo Caio
                       </p>
-                    </div>
+              </div>
                     <div class="bg-orange-50 p-4 rounded-lg">
                       <div class="flex justify-between items-center mb-2">
                         <span class="font-bold text-orange-800"
@@ -1308,11 +1346,11 @@
                         <span class="text-2xl font-bold text-orange-700"
                           >100%</span
                         >
-                      </div>
+                </div>
                       <p class="text-xs text-gray-600">
                         Cards atualizados antes de cada standup
-                      </p>
-                    </div>
+                    </p>
+                  </div>
                     <div class="bg-indigo-50 p-4 rounded-lg">
                       <div class="flex justify-between items-center mb-2">
                         <span class="font-bold text-indigo-800"
@@ -1321,7 +1359,7 @@
                         <span class="text-2xl font-bold text-indigo-700"
                           >>90%</span
                         >
-                      </div>
+                  </div>
                       <p class="text-xs text-gray-600">
                         Pesquisas mensais de satisfação
                       </p>
@@ -1344,7 +1382,7 @@
                     <div class="bg-white bg-opacity-20 p-4 rounded-lg mb-2">
                       <div class="text-2xl mb-1">🌅</div>
                       <div class="text-sm font-bold">09:00</div>
-                    </div>
+                </div>
                     <p class="text-xs">Trello Update</p>
                   </div>
                   <div class="text-2xl">→</div>
@@ -1352,7 +1390,7 @@
                     <div class="bg-white bg-opacity-20 p-4 rounded-lg mb-2">
                       <div class="text-2xl mb-1">📞</div>
                       <div class="text-sm font-bold">09:00-09:15</div>
-                    </div>
+                  </div>
                     <p class="text-xs">Daily Standup</p>
                   </div>
                   <div class="text-2xl">→</div>
@@ -1360,7 +1398,7 @@
                     <div class="bg-white bg-opacity-20 p-4 rounded-lg mb-2">
                       <div class="text-2xl mb-1">⚠️</div>
                       <div class="text-sm font-bold">Até 11:00</div>
-                    </div>
+                </div>
                     <p class="text-xs">Resolver Bloqueios</p>
                   </div>
                   <div class="text-2xl">→</div>
@@ -1382,47 +1420,47 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+              </div>
+            </div>
 
         <!-- SPRINT SUCCESS METRICS -->
         <div class="mb-12">
-          <div
+            <div
             class="bg-white rounded-xl p-8 shadow-lg border-4 border-[var(--color-primary)]"
-          >
-            <h4
-              class="text-2xl font-bold text-[var(--color-primary)] mb-6 text-center"
             >
-              📊 Como Medimos Sucesso em Um Sprint?
-            </h4>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-              <div class="bg-blue-50 p-4 rounded-lg">
-                <div class="text-4xl font-bold text-blue-700 mb-2">40-50</div>
-                <div class="text-sm text-gray-700 font-semibold">
-                  Story Points
-                </div>
+              <h4
+                class="text-2xl font-bold text-[var(--color-primary)] mb-6 text-center"
+              >
+                📊 Como Medimos Sucesso em Um Sprint?
+              </h4>
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div class="bg-blue-50 p-4 rounded-lg">
+                  <div class="text-4xl font-bold text-blue-700 mb-2">40-50</div>
+                  <div class="text-sm text-gray-700 font-semibold">
+                    Story Points
+                  </div>
                 <p class="text-xs text-gray-500 mt-1">Velocidade consistente</p>
-              </div>
-              <div class="bg-green-50 p-4 rounded-lg">
-                <div class="text-4xl font-bold text-green-700 mb-2">
-                  &gt;90%
                 </div>
-                <div class="text-sm text-gray-700 font-semibold">
-                  Sprint Goal
+                <div class="bg-green-50 p-4 rounded-lg">
+                  <div class="text-4xl font-bold text-green-700 mb-2">
+                    &gt;90%
+                  </div>
+                  <div class="text-sm text-gray-700 font-semibold">
+                    Sprint Goal
+                  </div>
+                  <p class="text-xs text-gray-500 mt-1">Entregas no prazo</p>
                 </div>
-                <p class="text-xs text-gray-500 mt-1">Entregas no prazo</p>
-              </div>
-              <div class="bg-purple-50 p-4 rounded-lg">
+                <div class="bg-purple-50 p-4 rounded-lg">
                 <div class="text-4xl font-bold text-purple-700 mb-2">&lt;5</div>
-                <div class="text-sm text-gray-700 font-semibold">Bugs</div>
-                <p class="text-xs text-gray-500 mt-1">Qualidade alta</p>
-              </div>
-              <div class="bg-orange-50 p-4 rounded-lg">
-                <div class="text-4xl font-bold text-orange-700 mb-2">100%</div>
-                <div class="text-sm text-gray-700 font-semibold">
-                  Team Happiness
+                  <div class="text-sm text-gray-700 font-semibold">Bugs</div>
+                  <p class="text-xs text-gray-500 mt-1">Qualidade alta</p>
                 </div>
-                <p class="text-xs text-gray-500 mt-1">Time motivado</p>
+                <div class="bg-orange-50 p-4 rounded-lg">
+                <div class="text-4xl font-bold text-orange-700 mb-2">100%</div>
+                  <div class="text-sm text-gray-700 font-semibold">
+                    Team Happiness
+                  </div>
+                  <p class="text-xs text-gray-500 mt-1">Time motivado</p>
               </div>
             </div>
           </div>
@@ -1758,7 +1796,7 @@
           <p class="text-center text-xl text-gray-700 mb-8 max-w-4xl mx-auto">
             Um processo
             <strong class="text-[var(--color-primary)]"
-              >vertical, automatizado</strong
+              >horizontal, automatizado</strong
             >
             e
             <strong class="text-[var(--color-secondary)]"
@@ -1781,388 +1819,346 @@
             </div>
           </div>
 
-          <!-- Workflow Visual Flow - VERTICAL -->
+          <!-- Mermaid Workflow Diagram -->
           <div
-            class="mt-8 bg-gradient-to-b from-blue-50 via-indigo-50 to-purple-50 rounded-3xl p-10 border-4 border-[var(--color-primary)] relative"
+            class="mt-8 mb-12 bg-white rounded-3xl p-8 border-4 border-[var(--color-primary)] shadow-xl"
           >
-            <!-- Vertical Timeline Container -->
-            <div class="relative max-w-4xl mx-auto">
-              <!-- Vertical Connector Line -->
+            <h4
+              class="text-2xl font-bold text-[var(--color-primary)] mb-6 text-center"
+            >
+              🔄 Fluxo Completo: Da Ideia à Produção
+            </h4>
+             <div class="mermaid" style="min-height: 800px">
+graph TB
+    %% Phase 1: Planning & Discovery
+    A["🤝 Client"] --> B["💼 Vitor: Sales"]
+    B --> C["🎼 Maestro: Discovery"]
+    C --> D["📋 BDD + Trello"]
+    D --> E["🗓️ Sprint Planning"]
+    
+    %% Phase 2: Design
+    E --> F["🎨 Design"]
+    F --> G["Figma System"]
+    G --> H["Prototypes"]
+    H --> I["Design Handoff"]
+    
+    %% Phase 3: Parallel Development
+    I --> J{"🔀 Parallel Development"}
+    J --> K1["👨‍💻 Frontend SolidJS"]
+    J --> K2["⚙️ Backend NestJS"]
+    J --> K3["📱 Mobile React Native"]
+    J --> K4["🏗️ DevOps Infra"]
+    
+    %% Phase 4: Quality Gates
+    K1 --> L["🐕 Husky Pre-commit"]
+    K2 --> L
+    K3 --> L
+    K4 --> L
+    L --> M["✅ Lint + Format + Type"]
+    M --> N["🧪 Unit Tests"]
+    N --> O["📝 Code Review"]
+    
+    %% Phase 5: Integration
+    O --> P["🔗 Git Push"]
+    P --> Q["🐕 Husky Pre-push"]
+    Q --> R["🧪 Integration Tests"]
+    R --> S["📊 Coverage Check"]
+    
+    %% Phase 6: CI/CD
+    S --> T["⚙️ CI/CD Pipeline"]
+    T --> U["🏗️ Build All"]
+    U --> V["🧪 E2E Tests"]
+    
+    %% Phase 7: QA
+    V --> W["🎯 QA Environment"]
+    W --> X["💼 Vitor: Manual QA"]
+    X --> Y["🔒 Security Scan"]
+    Y --> Z["⚡ Performance"]
+    
+    %% Phase 8: Production
+    Z --> AA{"✅ Approval?"}
+    AA -->|No| AB["🔄 Back to Dev"]
+    AA -->|Yes| AC["🚀 Production"]
+    
+    AC --> AD1["☁️ Vercel Frontend"]
+    AC --> AD2["🚂 Railway Backend"]
+    AC --> AD3["📱 EAS Mobile"]
+    
+    %% Phase 9: Monitor
+    AD1 --> AE["📊 Monitor"]
+    AD2 --> AE
+    AD3 --> AE
+    AE --> AF["🐛 Sentry"]
+    AE --> AG["📈 Grafana"]
+    
+    %% Phase 10: Feedback Loop
+    AF --> AH["✨ Client Delivery"]
+    AG --> AH
+    AH --> AI["💬 Feedback"]
+    AI --> AJ["🔄 Sprint Review"]
+    AJ --> AK["📝 Retrospective"]
+    AK --> E
+    
+    %% Maestro Oversight
+    C -.->|Coordinates| AL["🎼 Maestro: Caio"]
+    AL -.->|Oversees| J
+    AL -.->|Validates| AA
+    
+    %% Styling
+    classDef planPhase fill:#003f5c,stroke:#fff,stroke-width:3px,color:#fff
+    classDef devPhase fill:#58508d,stroke:#fff,stroke-width:3px,color:#fff
+    classDef qaPhase fill:#ff6361,stroke:#fff,stroke-width:3px,color:#fff
+    classDef prodPhase fill:#00a86b,stroke:#fff,stroke-width:3px,color:#fff
+    classDef maestro fill:#ffa600,stroke:#fff,stroke-width:3px,color:#000
+    
+    class A,B,C,D,E planPhase
+    class F,G,H,I,J,K1,K2,K3,K4,L,M,N,O,P,Q,R,S,T,U,V devPhase
+    class W,X,Y,Z,AA,AB qaPhase
+    class AC,AD1,AD2,AD3,AE,AF,AG,AH,AI prodPhase
+    class AL maestro
+            </div>
+          </div>
+
+          <!-- Detailed Husky Workflow Mermaid -->
+          <div
+            class="mt-8 mb-12 bg-white rounded-3xl p-8 border-4 border-[var(--color-accent3)] shadow-xl"
+          >
+            <h4
+              class="text-2xl font-bold text-[var(--color-accent3)] mb-6 text-center"
+            >
+              🐕 Husky Quality Gates: Automação Completa
+            </h4>
+            <pre class="mermaid" style="min-height: 400px">
+graph TB
+    subgraph "📝 Developer Commits Code"
+        A["💻 Code Change"] --> B["git commit"]
+    end
+    
+    subgraph "🐕 Pre-commit Hook"
+        B --> C{"Pre-commit"}
+        C --> D["✅ ESLint"]
+        C --> E["✅ Prettier"]
+        C --> F["✅ TypeScript Check"]
+        C --> G["✅ Unit Tests >80%"]
+        C --> H["✅ Architecture Validation"]
+        
+        D --> I{"All Pass?"}
+        E --> I
+        F --> I
+        G --> I
+        H --> I
+        
+        I -->|No| J["❌ Commit Rejected"]
+        I -->|Yes| K["✅ Commit Allowed"]
+    end
+    
+    subgraph "🔒 Pre-push Hook"
+        K --> L["git push"]
+        L --> M{"Pre-push"}
+        M --> N["🧪 Integration Tests"]
+        M --> O["🧪 E2E Tests"]
+        M --> P["🔒 Security Scan"]
+        M --> Q["⚡ Performance Check"]
+        
+        N --> R{"All Pass?"}
+        O --> R
+        P --> R
+        Q --> R
+        
+        R -->|No| S["❌ Push Rejected"]
+        R -->|Yes| T["✅ Push Allowed"]
+    end
+    
+    subgraph "⚙️ CI/CD Pipeline"
+        T --> U["GitHub Actions Triggered"]
+        U --> V["🏗️ Build All Stacks"]
+        V --> W["🧪 Full Test Suite"]
+        W --> X["🚀 Deploy to Staging"]
+        X --> Y{"Health Check"}
+        Y -->|Pass| Z["✅ Staging Ready"]
+        Y -->|Fail| AA["🔄 Auto Rollback"]
+    end
+    
+    subgraph "🚀 Pre-deploy Gate"
+        Z --> AB{"Pre-deploy Checks"}
+        AB --> AC["✅ All Tests Passing"]
+        AB --> AD["✅ QA Approval"]
+        AB --> AE["✅ Performance OK"]
+        AB --> AF["✅ Client Approval"]
+        
+        AC --> AG{"Ready?"}
+        AD --> AG
+        AE --> AG
+        AF --> AG
+        
+        AG -->|Yes| AH["🚀 Production Deploy"]
+        AG -->|No| AI["⏸️ Hold Deployment"]
+    end
+    
+    AH --> AJ["✨ In Production"]
+    
+    classDef precommit fill:#ffa600,stroke:#fff,stroke-width:2px,color:#000
+    classDef prepush fill:#ff6361,stroke:#fff,stroke-width:2px,color:#fff
+    classDef cicd fill:#58508d,stroke:#fff,stroke-width:2px,color:#fff
+    classDef production fill:#00a86b,stroke:#fff,stroke-width:2px,color:#fff
+    
+    class C,D,E,F,G,H,I,J,K precommit
+    class M,N,O,P,Q,R,S,T prepush
+    class U,V,W,X,Y,Z,AA,AB,AC,AD,AE,AF,AG cicd
+    class AH,AI,AJ production
+                </div>
+              </div>
+
+          <!-- Horizontal Workflow Flow -->
+          <div
+            class="mt-8 bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 rounded-3xl p-10 border-4 border-[var(--color-primary)] relative overflow-x-auto"
+          >
+            <!-- Horizontal Timeline Container -->
+            <div class="relative min-w-max mx-auto">
+              <!-- Horizontal Connector Line -->
               <div
-                class="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[var(--color-primary)] via-[var(--color-secondary)] to-green-600 rounded-full opacity-30"
-                style="width: 4px"
+                class="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-[var(--color-primary)] via-[var(--color-secondary)] to-green-600 rounded-full opacity-30 transform -translate-y-1/2"
+                style="height: 4px"
               ></div>
 
-              <!-- PHASE 1: PLAN -->
-              <div class="relative mb-10">
-                <div class="flex items-center gap-6">
-                  <!-- Phase Indicator -->
+              <!-- HORIZONTAL PHASES CONTAINER -->
+              <div class="flex flex-row items-stretch gap-6 py-8 relative z-10">
+                <!-- PHASE 1: PLAN -->
+                <div class="flex flex-col items-center min-w-[280px]">
                   <div
-                    class="flex-shrink-0 w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center shadow-xl border-4 border-white relative z-10"
+                    class="w-20 h-20 bg-[var(--color-primary)] rounded-full flex items-center justify-center shadow-xl border-4 border-white mb-4 relative z-10"
                   >
-                    <span class="text-3xl">1</span>
-                  </div>
-                  <!-- Phase Content -->
+                    <span class="text-3xl font-bold text-white">1</span>
+                </div>
                   <div
-                    class="flex-1 bg-white rounded-2xl p-6 shadow-xl border-l-8 border-[var(--color-primary)]"
+                    class="bg-white rounded-2xl p-5 shadow-xl border-t-4 border-[var(--color-primary)] w-full"
                   >
-                    <div class="flex items-center justify-between mb-4">
-                      <h4
-                        class="text-3xl font-bold text-[var(--color-primary)]"
-                      >
-                        📋 PLAN
-                      </h4>
-                      <span
-                        class="bg-[var(--color-primary)] text-white px-4 py-1 rounded-full text-sm font-semibold"
-                        >Fase Inicial</span
-                      >
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                      <div class="bg-blue-50 p-4 rounded-xl">
-                        <div class="font-bold text-blue-800 mb-2">
-                          📋 Trello
-                        </div>
-                        <p class="text-sm text-gray-700">
-                          Board criado, tasks priorizadas, sprint backlog
-                          definido
-                        </p>
-                      </div>
-                      <div class="bg-indigo-50 p-4 rounded-xl">
-                        <div class="font-bold text-indigo-800 mb-2">
-                          🧪 TEST PLAN
-                        </div>
-                        <p class="text-sm text-gray-700">
-                          Estratégia de testes, cenários, cobertura >80%
-                          definida
-                        </p>
-                      </div>
-                      <div class="bg-purple-50 p-4 rounded-xl">
-                        <div class="font-bold text-purple-800 mb-2">
-                          📝 BDD?
-                        </div>
-                        <p class="text-sm text-gray-700">
-                          Histórias de usuário, cenários, requisitos validados
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      class="mt-4 flex items-center gap-2 text-sm text-gray-600"
+                    <h4
+                      class="text-2xl font-bold text-[var(--color-primary)] mb-3 text-center"
                     >
-                      <span class="bg-green-100 px-3 py-1 rounded-full"
-                        >✓ Coleta de Requisitos</span
-                      >
-                      <span class="bg-green-100 px-3 py-1 rounded-full"
-                        >✓ Planejamento de Sprint</span
-                      >
-                      <span class="bg-green-100 px-3 py-1 rounded-full"
-                        >✓ Design de Arquitetura</span
-                      >
+                      📋 PLAN
+                    </h4>
+                    <div class="space-y-2 text-xs">
+                      <div class="bg-blue-50 p-2 rounded">📋 Trello Board</div>
+                      <div class="bg-indigo-50 p-2 rounded">🧪 Test Plan</div>
+                      <div class="bg-purple-50 p-2 rounded">📝 BDD Stories</div>
+                    </div>
+                    <div class="mt-3 space-y-1 text-xs text-gray-600">
+                      <div>✓ Requisitos</div>
+                      <div>✓ Sprint Planning</div>
+                      <div>✓ Arquitetura</div>
                     </div>
                   </div>
+              </div>
+
+                <!-- Arrow Right -->
+                <div
+                  class="flex items-center text-3xl text-[var(--color-primary)]"
+                >
+                  →
                 </div>
-              </div>
 
-              <!-- Arrow Down -->
-              <div class="flex justify-center mb-10">
-                <div class="text-4xl text-[var(--color-primary)]">⬇️</div>
-              </div>
-
-              <!-- PHASE 2: DEV -->
-              <div class="relative mb-10">
-                <div class="flex items-center gap-6">
-                  <!-- Phase Indicator -->
+                <!-- PHASE 2: DEV -->
+                <div class="flex flex-col items-center min-w-[280px]">
                   <div
-                    class="flex-shrink-0 w-16 h-16 bg-[var(--color-secondary)] rounded-full flex items-center justify-center shadow-xl border-4 border-white relative z-10"
+                    class="w-20 h-20 bg-[var(--color-secondary)] rounded-full flex items-center justify-center shadow-xl border-4 border-white mb-4 relative z-10"
                   >
-                    <span class="text-3xl">2</span>
-                  </div>
-                  <!-- Phase Content -->
-                  <div
-                    class="flex-1 bg-white rounded-2xl p-6 shadow-xl border-l-8 border-[var(--color-secondary)]"
-                  >
-                    <div class="flex items-center justify-between mb-4">
-                      <h4
-                        class="text-3xl font-bold text-[var(--color-secondary)]"
-                      >
-                        💻 DEV
-                      </h4>
-                      <span
-                        class="bg-[var(--color-secondary)] text-white px-4 py-1 rounded-full text-sm font-semibold"
-                        >Desenvolvimento</span
-                      >
-                    </div>
-
-                    <!-- Development Steps with Pipeline Triggers -->
-                    <div class="space-y-4">
-                      <!-- Step 1: Code -->
-                      <div
-                        class="bg-purple-50 p-4 rounded-xl border-2 border-purple-200"
-                      >
-                        <div class="font-bold text-purple-800 mb-2">
-                          💻 Implementação de Código
-                        </div>
-                        <p class="text-sm text-gray-700 mb-3">
-                          Desenvolvimento paralelo: Frontend (SolidJS) + Backend
-                          (NestJS) + Mobile (React Native)
-                        </p>
-                      </div>
-
-                      <!-- Step 2: Code Review → Pipeline 1 -->
-                      <div class="relative">
-                        <div
-                          class="bg-indigo-50 p-4 rounded-xl border-2 border-indigo-200"
-                        >
-                          <div class="font-bold text-indigo-800 mb-2">
-                            👀 Revisão de Código (Disparador Pipeline 1)
-                          </div>
-                          <div
-                            class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-700"
-                          >
-                            <div>✓ Peer review obrigatório (2 aprovadores)</div>
-                            <div>✓ Linting + TypeScript check</div>
-                            <div>✓ Security scan automático</div>
-                            <div>✓ Validação de arquitetura</div>
-                          </div>
-                        </div>
-                        <div
-                          class="absolute right-4 top-1/2 transform -translate-y-1/2"
-                        >
-                          <div
-                            class="bg-indigo-600 text-white px-3 py-1 rounded-lg text-xs font-bold shadow-lg"
-                          >
-                            → Pipeline 1
-                          </div>
-                        </div>
-                      </div>
-
-                      <!-- Pipeline 1 Info -->
-                      <div
-                        class="bg-gradient-to-r from-indigo-100 to-purple-100 p-3 rounded-lg border-l-4 border-indigo-500 ml-8"
-                      >
-                        <div class="text-xs font-bold text-indigo-800 mb-1">
-                          PIPELINE 1 AUTOMATIZADO
-                        </div>
-                        <div class="text-xs text-gray-700 space-y-1">
-                          <div>
-                            ⚡ Build verificação (2-3 min) • ESLint/Prettier •
-                            TypeScript check
-                          </div>
-                          <div>
-                            ⚡ Security scan • Static analysis • Husky
-                            pre-commit hooks
-                          </div>
-                        </div>
-                      </div>
-
-                      <!-- Step 3: Unit Test → Pipeline 2 -->
-                      <div class="relative mt-4">
-                        <div
-                          class="bg-blue-50 p-4 rounded-xl border-2 border-blue-200"
-                        >
-                          <div class="font-bold text-blue-800 mb-2">
-                            🧪 Testes Unitários (Disparador Pipeline 2)
-                          </div>
-                          <div
-                            class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-700"
-                          >
-                            <div>✓ Frontend: Vitest (>80% cobertura)</div>
-                            <div>✓ Backend: Jest (>85% cobertura)</div>
-                            <div>✓ Mobile: Jest (>75% cobertura)</div>
-                            <div>✓ Todos os testes passando</div>
-                          </div>
-                        </div>
-                        <div
-                          class="absolute right-4 top-1/2 transform -translate-y-1/2"
-                        >
-                          <div
-                            class="bg-blue-600 text-white px-3 py-1 rounded-lg text-xs font-bold shadow-lg"
-                          >
-                            → Pipeline 2
-                          </div>
-                        </div>
-                      </div>
-
-                      <!-- Pipeline 2 Info -->
-                      <div
-                        class="bg-gradient-to-r from-blue-100 to-cyan-100 p-3 rounded-lg border-l-4 border-blue-500 ml-8"
-                      >
-                        <div class="text-xs font-bold text-blue-800 mb-1">
-                          PIPELINE 2 AUTOMATIZADO
-                        </div>
-                        <div class="text-xs text-gray-700 space-y-1">
-                          <div>
-                            ⚡ Integration tests executados (5-10 min) • Testes
-                            E2E básicos
-                          </div>
-                          <div>
-                            ⚡ Deploy automático para staging • Verificação de
-                            build
-                          </div>
-                        </div>
-                      </div>
-
-                      <!-- Step 4: Integration Tests -->
-                      <div
-                        class="bg-cyan-50 p-4 rounded-xl border-2 border-cyan-200 mt-4"
-                      >
-                        <div class="font-bold text-cyan-800 mb-2">
-                          🔗 Testes de Integração (APIs/Rotas)
-                        </div>
-                        <div
-                          class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-700"
-                        >
-                          <div>✓ API endpoints testados (Supertest)</div>
-                          <div>✓ Rotas e integrações validadas</div>
-                          <div>✓ Testes de integração com banco de dados</div>
-                          <div>✓ APIs externas simuladas</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                    <span class="text-3xl font-bold text-white">2</span>
                 </div>
-              </div>
-
-              <!-- Arrow Down -->
-              <div class="flex justify-center mb-10">
-                <div class="text-4xl text-[var(--color-accent2)]">⬇️</div>
-              </div>
-
-              <!-- PHASE 3: QVA HOMOLOGAÇÃO -->
-              <div class="relative mb-10">
-                <div class="flex items-center gap-6">
-                  <!-- Phase Indicator -->
                   <div
-                    class="flex-shrink-0 w-16 h-16 bg-[var(--color-accent2)] rounded-full flex items-center justify-center shadow-xl border-4 border-white relative z-10 ring-4 ring-yellow-300"
+                    class="bg-white rounded-2xl p-5 shadow-xl border-t-4 border-[var(--color-secondary)] w-full"
                   >
-                    <span class="text-3xl">3</span>
-                  </div>
-                  <!-- Phase Content -->
-                  <div
-                    class="flex-1 bg-white rounded-2xl p-6 shadow-xl border-l-8 border-[var(--color-accent2)] ring-4 ring-yellow-200"
-                  >
-                    <div class="flex items-center justify-between mb-4">
-                      <h4
-                        class="text-3xl font-bold text-[var(--color-accent2)]"
-                      >
-                        ✅ QVA & HOMOLOGAÇÃO
-                      </h4>
-                      <span
-                        class="bg-[var(--color-accent2)] text-white px-4 py-1 rounded-full text-sm font-semibold"
-                        >Validação</span
-                      >
-                    </div>
-
-                    <!-- E2E Highlighted -->
-                    <div
-                      class="bg-gradient-to-r from-yellow-100 to-orange-100 p-6 rounded-xl border-4 border-yellow-400 mb-4 ring-2 ring-yellow-300"
+                    <h4
+                      class="text-2xl font-bold text-[var(--color-secondary)] mb-3 text-center"
                     >
-                      <div class="text-center">
-                        <div class="text-5xl mb-2">🎯</div>
-                        <div class="text-2xl font-bold text-orange-800 mb-2">
-                          Testes E2E (Ponta a Ponta)
-                        </div>
-                        <p class="text-sm text-gray-700 mb-3">
-                          Testes completos do fluxo do usuário simulando
-                          cenários reais
-                        </p>
-                        <div class="flex justify-center gap-4 text-xs">
-                          <span class="bg-yellow-200 px-3 py-1 rounded-full"
-                            >Cypress (Frontend)</span
-                          >
-                          <span class="bg-yellow-200 px-3 py-1 rounded-full"
-                            >Detox (Mobile)</span
-                          >
-                          <span class="bg-yellow-200 px-3 py-1 rounded-full"
-                            >Supertest (Backend)</span
-                          >
-                        </div>
+                      💻 DEV
+                    </h4>
+                    <div class="space-y-2 text-xs">
+                      <div class="bg-purple-50 p-2 rounded">
+                        💻 Code Parallel
                       </div>
+                      <div class="bg-indigo-50 p-2 rounded">👀 Code Review</div>
+                      <div class="bg-blue-50 p-2 rounded">🧪 Unit Tests</div>
+                      <div class="bg-cyan-50 p-2 rounded">🔗 Integration</div>
                     </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div class="bg-orange-50 p-4 rounded-xl">
-                        <div class="font-bold text-orange-800 mb-2">
-                          🧪 Garantia de Qualidade
-                        </div>
-                        <ul class="text-sm text-gray-700 space-y-1">
-                          <li>✓ Testes manuais (mr. Vitor)</li>
-                          <li>✓ Testes cross-browser</li>
-                          <li>✓ Validação de performance</li>
-                          <li>✓ Testes de acessibilidade (WCAG)</li>
-                        </ul>
-                      </div>
-                      <div class="bg-red-50 p-4 rounded-xl">
-                        <div class="font-bold text-red-800 mb-2">
-                          🤝 Homologação / Validação do Usuário
-                        </div>
-                        <ul class="text-sm text-gray-700 space-y-1">
-                          <li>✓ Validação do cliente</li>
-                          <li>✓ Aprovação dos stakeholders</li>
-                          <li>✓ Verificação das regras de negócio</li>
-                          <li>✓ Aprovação formal</li>
-                        </ul>
-                      </div>
+                    <div class="mt-3 space-y-1 text-xs text-gray-600">
+                      <div>✓ Husky Pre-commit</div>
+                      <div>✓ Husky Pre-push</div>
+                      <div>✓ CI/CD Pipeline</div>
                     </div>
                   </div>
+              </div>
+
+                <!-- Arrow Right -->
+                <div
+                  class="flex items-center text-3xl text-[var(--color-accent2)]"
+                >
+                  →
                 </div>
-              </div>
 
-              <!-- Arrow Down -->
-              <div class="flex justify-center mb-10">
-                <div class="text-4xl text-green-600">⬇️</div>
-              </div>
-
-              <!-- PHASE 4: PRODUCTION -->
-              <div class="relative">
-                <div class="flex items-center gap-6">
-                  <!-- Phase Indicator -->
+                <!-- PHASE 3: QVA -->
+                <div class="flex flex-col items-center min-w-[280px]">
                   <div
-                    class="flex-shrink-0 w-16 h-16 bg-green-600 rounded-full flex items-center justify-center shadow-xl border-4 border-white relative z-10"
+                    class="w-20 h-20 bg-[var(--color-accent2)] rounded-full flex items-center justify-center shadow-xl border-4 border-white mb-4 relative z-10 ring-4 ring-yellow-300"
                   >
-                    <span class="text-3xl">4</span>
-                  </div>
-                  <!-- Phase Content -->
+                    <span class="text-3xl font-bold text-white">3</span>
+                </div>
                   <div
-                    class="flex-1 bg-white rounded-2xl p-6 shadow-xl border-l-8 border-green-600"
+                    class="bg-white rounded-2xl p-5 shadow-xl border-t-4 border-[var(--color-accent2)] w-full ring-2 ring-yellow-200"
                   >
-                    <div class="flex items-center justify-between mb-4">
-                      <h4 class="text-3xl font-bold text-green-700">
-                        🚀 PRODUÇÃO
-                      </h4>
-                      <span
-                        class="bg-green-600 text-white px-4 py-1 rounded-full text-sm font-semibold"
-                        >Ao Vivo</span
+                    <h4
+                      class="text-2xl font-bold text-[var(--color-accent2)] mb-3 text-center"
+                    >
+                      ✅ QVA
+                    </h4>
+                    <div class="space-y-2 text-xs">
+                      <div
+                        class="bg-yellow-50 p-2 rounded border-2 border-yellow-300"
                       >
+                        🎯 E2E Tests
+                      </div>
+                      <div class="bg-orange-50 p-2 rounded">🧪 Manual QA</div>
+                      <div class="bg-red-50 p-2 rounded">🤝 Homologação</div>
                     </div>
+                    <div class="mt-3 space-y-1 text-xs text-gray-600">
+                      <div>✓ Cypress/Detox</div>
+                      <div>✓ Vitor QA</div>
+                      <div>✓ Client Approval</div>
+                    </div>
+                  </div>
+              </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div class="bg-green-50 p-4 rounded-xl">
-                        <div class="font-bold text-green-800 mb-2">
-                          🚀 Deploy Automatizado
-                        </div>
-                        <ul class="text-sm text-gray-700 space-y-1">
-                          <li>✓ Deploy sem downtime</li>
-                          <li>✓ Verificações de saúde automáticas</li>
-                          <li>✓ Rollback automático em caso de falha</li>
-                          <li>✓ Deploy em 15 min (vs 4h manual)</li>
-                        </ul>
-                      </div>
-                      <div class="bg-emerald-50 p-4 rounded-xl">
-                        <div class="font-bold text-emerald-800 mb-2">
-                          📊 Monitoramento e Operações
-                        </div>
-                        <ul class="text-sm text-gray-700 space-y-1">
-                          <li>✓ Monitoramento 24/7 (Sentry)</li>
-                          <li>✓ Alertas em tempo real (Prometheus)</li>
-                          <li>✓ Acompanhamento de performance (Grafana)</li>
-                          <li>✓ Uptime 99.9% garantido</li>
-                        </ul>
-                      </div>
+                <!-- Arrow Right -->
+                <div class="flex items-center text-3xl text-green-600">→</div>
+
+                <!-- PHASE 4: PRODUCTION -->
+                <div class="flex flex-col items-center min-w-[280px]">
+                <div
+                    class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center shadow-xl border-4 border-white mb-4 relative z-10"
+                >
+                    <span class="text-3xl font-bold text-white">4</span>
+                </div>
+                  <div
+                    class="bg-white rounded-2xl p-5 shadow-xl border-t-4 border-green-600 w-full"
+                  >
+                    <h4
+                      class="text-2xl font-bold text-green-700 mb-3 text-center"
+                    >
+                      🚀 PROD
+                    </h4>
+                    <div class="space-y-2 text-xs">
+                      <div class="bg-green-50 p-2 rounded">🚀 Auto Deploy</div>
+                      <div class="bg-emerald-50 p-2 rounded">📊 Monitor</div>
+                    </div>
+                    <div class="mt-3 space-y-1 text-xs text-gray-600">
+                      <div>✓ Vercel/Railway</div>
+                      <div>✓ Sentry/Grafana</div>
+                      <div>✓ 99.9% Uptime</div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+              </div>
 
             <!-- CI/CD Footer Overlay -->
             <div class="mt-8 pt-6 border-t-4 border-dashed border-gray-300">
@@ -2172,139 +2168,139 @@
                 >
                   <div class="text-2xl font-bold mb-2">
                     🔄 CI/CD (Integração Contínua/Entrega Contínua)
-                  </div>
+                </div>
                   <div class="text-sm opacity-90">
                     GitHub Actions • Automação de Deploy • Automação de Testes •
                     Zero Passos Manuais
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <!-- Team Roles Grid -->
-          <div
-            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12"
-          >
-            <!-- Frontend -->
-            <div
-              class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-[var(--color-primary)]"
-            >
-              <div class="text-center">
-                <div class="text-5xl mb-3">🎨</div>
-                <h4 class="text-2xl font-bold text-[var(--color-primary)] mb-3">
-                  Frontend
-                </h4>
-                <p class="text-sm text-gray-700 mb-4">SolidJS + React Native</p>
               </div>
-              <div class="space-y-2 text-sm">
-                <div class="bg-blue-50 p-2 rounded">
-                  ✓ Desenvolvimento de Componentes
+            </div>
+
+            <!-- Team Roles Grid -->
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12"
+            >
+              <!-- Frontend -->
+              <div
+                class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-[var(--color-primary)]"
+              >
+                <div class="text-center">
+                  <div class="text-5xl mb-3">🎨</div>
+                <h4 class="text-2xl font-bold text-[var(--color-primary)] mb-3">
+                    Frontend
+                  </h4>
+                <p class="text-sm text-gray-700 mb-4">SolidJS + React Native</p>
                 </div>
+                <div class="space-y-2 text-sm">
+                  <div class="bg-blue-50 p-2 rounded">
+                  ✓ Desenvolvimento de Componentes
+                  </div>
                 <div class="bg-blue-50 p-2 rounded">✓ Implementação UI/UX</div>
                 <div class="bg-blue-50 p-2 rounded">✓ Testes E2E (Cypress)</div>
                 <div class="bg-blue-50 p-2 rounded">✓ Deploy Vercel</div>
-              </div>
-            </div>
-
-            <!-- Backend -->
-            <div
-              class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-[var(--color-secondary)]"
-            >
-              <div class="text-center">
-                <div class="text-5xl mb-3">⚙️</div>
-                <h4
-                  class="text-2xl font-bold text-[var(--color-secondary)] mb-3"
-                >
-                  Backend
-                </h4>
-                <p class="text-sm text-gray-700 mb-4">NestJS + PostgreSQL</p>
-              </div>
-              <div class="space-y-2 text-sm">
-                <div class="bg-purple-50 p-2 rounded">
-                  ✓ Desenvolvimento de APIs
                 </div>
+              </div>
+
+              <!-- Backend -->
+              <div
+                class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-[var(--color-secondary)]"
+              >
+                <div class="text-center">
+                  <div class="text-5xl mb-3">⚙️</div>
+                  <h4
+                    class="text-2xl font-bold text-[var(--color-secondary)] mb-3"
+                  >
+                    Backend
+                  </h4>
+                  <p class="text-sm text-gray-700 mb-4">NestJS + PostgreSQL</p>
+                </div>
+                <div class="space-y-2 text-sm">
+                  <div class="bg-purple-50 p-2 rounded">
+                  ✓ Desenvolvimento de APIs
+                  </div>
                 <div class="bg-purple-50 p-2 rounded">✓ Lógica de Negócio</div>
                 <div class="bg-purple-50 p-2 rounded">
                   ✓ Testes Unitários (>85%)
                 </div>
                 <div class="bg-purple-50 p-2 rounded">✓ Deploy Railway</div>
+                </div>
               </div>
-            </div>
 
-            <!-- DevOps -->
-            <div
-              class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-[var(--color-accent1)]"
-            >
-              <div class="text-center">
-                <div class="text-5xl mb-3">🏗️</div>
+              <!-- DevOps -->
+              <div
+                class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-[var(--color-accent1)]"
+              >
+                <div class="text-center">
+                  <div class="text-5xl mb-3">🏗️</div>
                 <h4 class="text-2xl font-bold text-[var(--color-accent1)] mb-3">
-                  DevOps
-                </h4>
+                    DevOps
+                  </h4>
                 <p class="text-sm text-gray-700 mb-4">Infraestrutura + CI/CD</p>
-              </div>
-              <div class="space-y-2 text-sm">
-                <div class="bg-pink-50 p-2 rounded">✓ Docker + K8s</div>
-                <div class="bg-pink-50 p-2 rounded">✓ GitHub Actions</div>
+                </div>
+                <div class="space-y-2 text-sm">
+                  <div class="bg-pink-50 p-2 rounded">✓ Docker + K8s</div>
+                  <div class="bg-pink-50 p-2 rounded">✓ GitHub Actions</div>
                 <div class="bg-pink-50 p-2 rounded">
                   ✓ Configuração de Monitoramento
                 </div>
-                <div class="bg-pink-50 p-2 rounded">✓ Auto-scaling</div>
+                  <div class="bg-pink-50 p-2 rounded">✓ Auto-scaling</div>
+                </div>
               </div>
-            </div>
 
-            <!-- QA -->
-            <div
-              class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-[var(--color-accent2)]"
-            >
-              <div class="text-center">
-                <div class="text-5xl mb-3">🧪</div>
+              <!-- QA -->
+              <div
+                class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-[var(--color-accent2)]"
+              >
+                <div class="text-center">
+                  <div class="text-5xl mb-3">🧪</div>
                 <h4 class="text-2xl font-bold text-[var(--color-accent2)] mb-3">
-                  QA
-                </h4>
+                    QA
+                  </h4>
                 <p class="text-sm text-gray-700 mb-4">Garantia de Qualidade</p>
-              </div>
-              <div class="space-y-2 text-sm">
+                </div>
+                <div class="space-y-2 text-sm">
                 <div class="bg-red-50 p-2 rounded">✓ Testes Manuais</div>
                 <div class="bg-red-50 p-2 rounded">✓ Automação E2E</div>
                 <div class="bg-red-50 p-2 rounded">✓ Testes de Performance</div>
                 <div class="bg-red-50 p-2 rounded">✓ Gestão de Bugs</div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- Maestro Coordination -->
-          <div
-            class="mt-8 bg-gradient-to-r from-[var(--color-accent3)] to-orange-400 text-white p-8 rounded-xl"
-          >
-            <div class="text-center">
-              <div class="text-6xl mb-4">🎼</div>
-              <h4 class="text-3xl font-bold mb-4">Maestro: O Coordenador</h4>
-              <p class="text-xl mb-6">
-                Orquestrando todos os processos em harmonia
-              </p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div class="bg-white bg-opacity-20 p-4 rounded-lg">
+            <!-- Maestro Coordination -->
+            <div
+              class="mt-8 bg-gradient-to-r from-[var(--color-accent3)] to-orange-400 text-white p-8 rounded-xl"
+            >
+              <div class="text-center">
+                <div class="text-6xl mb-4">🎼</div>
+                <h4 class="text-3xl font-bold mb-4">Maestro: O Coordenador</h4>
+                <p class="text-xl mb-6">
+                  Orquestrando todos os processos em harmonia
+                </p>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-white bg-opacity-20 p-4 rounded-lg">
                 <div class="font-bold text-lg mb-2">
                   🎯 Planejamento de Sprint
                 </div>
-                <p class="text-sm">Coordenação bi-semanal com todo o time</p>
-              </div>
-              <div class="bg-white bg-opacity-20 p-4 rounded-lg">
-                <div class="font-bold text-lg mb-2">
-                  🤝 Comunicação com Cliente
+                  <p class="text-sm">Coordenação bi-semanal com todo o time</p>
                 </div>
-                <p class="text-sm">
+                <div class="bg-white bg-opacity-20 p-4 rounded-lg">
+                  <div class="font-bold text-lg mb-2">
+                  🤝 Comunicação com Cliente
+                  </div>
+                  <p class="text-sm">
                   Atualizações semanais e gestão de expectativas
-                </p>
-              </div>
-              <div class="bg-white bg-opacity-20 p-4 rounded-lg">
+                  </p>
+                </div>
+                <div class="bg-white bg-opacity-20 p-4 rounded-lg">
                 <div class="font-bold text-lg mb-2">⚠️ Gestão de Riscos</div>
-                <p class="text-sm">Identificação e mitigação proativa</p>
+                  <p class="text-sm">Identificação e mitigação proativa</p>
+                </div>
               </div>
             </div>
-          </div>
 
           <!-- Quality Gates -->
           <div
@@ -2382,69 +2378,92 @@
             class="mt-8 bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl p-8 border-4 border-[var(--color-secondary)]"
           >
             <!-- Sales Pipeline -->
-            <div
-              class="flex justify-between items-center mb-12 overflow-x-auto"
-            >
-              <div class="text-center min-w-[160px]">
-                <div
-                  class="bg-blue-600 text-white p-5 rounded-2xl shadow-lg mb-3"
-                >
-                  <div class="text-3xl mb-2">🎯</div>
-                  <div class="text-lg font-bold">Prospecção</div>
+            <div class="mb-12">
+              <div
+                class="flex justify-center items-center overflow-x-auto gap-4 md:gap-6 flex-wrap"
+              >
+                <div class="text-center min-w-[140px] max-w-[180px] flex-1">
+                  <div
+                    class="bg-blue-600 text-white p-5 rounded-2xl shadow-lg mb-3 mx-auto"
+                    style="max-width: 160px"
+                  >
+                    <div class="text-3xl mb-2">🎯</div>
+                    <div class="text-lg font-bold">Prospecção</div>
+                  </div>
+                  <p class="text-sm text-gray-700 font-semibold">
+                    Geração de Leads
+                  </p>
                 </div>
-                <p class="text-sm text-gray-700 font-semibold">
-                  Geração de Leads
-                </p>
-              </div>
 
-              <div class="text-3xl text-gray-400 mx-2">→</div>
-
-              <div class="text-center min-w-[160px]">
                 <div
-                  class="bg-indigo-600 text-white p-5 rounded-2xl shadow-lg mb-3"
+                  class="hidden sm:block text-3xl text-gray-400 flex-shrink-0"
                 >
-                  <div class="text-3xl mb-2">🔍</div>
-                  <div class="text-lg font-bold">Qualificação</div>
+                  →
                 </div>
-                <p class="text-sm text-gray-700 font-semibold">
-                  BANT Framework
-                </p>
-              </div>
 
-              <div class="text-3xl text-gray-400 mx-2">→</div>
+                <div class="text-center min-w-[140px] max-w-[180px] flex-1">
+                  <div
+                    class="bg-indigo-600 text-white p-5 rounded-2xl shadow-lg mb-3 mx-auto"
+                    style="max-width: 160px"
+                  >
+                    <div class="text-3xl mb-2">🔍</div>
+                    <div class="text-lg font-bold">Qualificação</div>
+                  </div>
+                  <p class="text-sm text-gray-700 font-semibold">
+                    BANT Framework
+                  </p>
+                </div>
 
-              <div class="text-center min-w-[160px]">
                 <div
-                  class="bg-purple-600 text-white p-5 rounded-2xl shadow-lg mb-3"
+                  class="hidden sm:block text-3xl text-gray-400 flex-shrink-0"
                 >
-                  <div class="text-3xl mb-2">💡</div>
-                  <div class="text-lg font-bold">Discovery</div>
+                  →
                 </div>
-                <p class="text-sm text-gray-700 font-semibold">Need Analysis</p>
-              </div>
 
-              <div class="text-3xl text-gray-400 mx-2">→</div>
+                <div class="text-center min-w-[140px] max-w-[180px] flex-1">
+                  <div
+                    class="bg-purple-600 text-white p-5 rounded-2xl shadow-lg mb-3 mx-auto"
+                    style="max-width: 160px"
+                  >
+                    <div class="text-3xl mb-2">💡</div>
+                    <div class="text-lg font-bold">Discovery</div>
+                  </div>
+                  <p class="text-sm text-gray-700 font-semibold">Need Analysis</p>
+                </div>
 
-              <div class="text-center min-w-[160px]">
                 <div
-                  class="bg-pink-600 text-white p-5 rounded-2xl shadow-lg mb-3"
+                  class="hidden sm:block text-3xl text-gray-400 flex-shrink-0"
                 >
-                  <div class="text-3xl mb-2">📝</div>
-                  <div class="text-lg font-bold">Proposta</div>
+                  →
                 </div>
-                <p class="text-sm text-gray-700 font-semibold">Pitch + Demo</p>
-              </div>
 
-              <div class="text-3xl text-gray-400 mx-2">→</div>
+                <div class="text-center min-w-[140px] max-w-[180px] flex-1">
+                  <div
+                    class="bg-pink-600 text-white p-5 rounded-2xl shadow-lg mb-3 mx-auto"
+                    style="max-width: 160px"
+                  >
+                    <div class="text-3xl mb-2">📝</div>
+                    <div class="text-lg font-bold">Proposta</div>
+                  </div>
+                  <p class="text-sm text-gray-700 font-semibold">Pitch + Demo</p>
+                </div>
 
-              <div class="text-center min-w-[160px]">
                 <div
-                  class="bg-green-600 text-white p-5 rounded-2xl shadow-lg mb-3"
+                  class="hidden sm:block text-3xl text-gray-400 flex-shrink-0"
                 >
-                  <div class="text-3xl mb-2">🤝</div>
-                  <div class="text-lg font-bold">Fechamento</div>
+                  →
                 </div>
-                <p class="text-sm text-gray-700 font-semibold">Contract</p>
+
+                <div class="text-center min-w-[140px] max-w-[180px] flex-1">
+                  <div
+                    class="bg-green-600 text-white p-5 rounded-2xl shadow-lg mb-3 mx-auto"
+                    style="max-width: 160px"
+                  >
+                    <div class="text-3xl mb-2">🤝</div>
+                    <div class="text-lg font-bold">Fechamento</div>
+                  </div>
+                  <p class="text-sm text-gray-700 font-semibold">Contract</p>
+                </div>
               </div>
             </div>
 
@@ -2627,7 +2646,7 @@
           >
             🛠️ Stack Tecnológico e Fluxos Paralelos
           </h3>
-
+          
           <div
             class="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl p-8 border-4 border-[var(--color-accent3)] mt-8"
           >
